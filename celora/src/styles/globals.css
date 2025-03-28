@@ -1,0 +1,142 @@
+/* ✅ 1. Google Fonts Import (Must be at the very top) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;700&display=swap');
+
+html[dir="rtl"] {
+  font-family: Vazirmatn, sans-serif;
+}
+
+/* ✅ 2. Tailwind Imports */
+@import "tailwindcss";
+
+/* ✅ 3. Global Styles */
+body {
+  background-color: #f3efe6; /* Soft beige */
+  color: #5a5145; /* Muted brown */
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* 🖋️ Typography */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+/* 🌟 Navbar - Floating & Soft Glow */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: rgba(243, 239, 230, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #d8c3a5;
+    padding: 12px 0;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  /* Navbar on Scroll */
+  .navbar.scrolled {
+    background-color: rgba(243, 239, 230, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 🔵 Logo - Floating Effect */
+  .navbar-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5a5145;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-logo:hover {
+    color: #b08968;
+    text-shadow: 0 0 8px rgba(176, 137, 104, 0.7);
+  }
+  
+  /* 🟢 Navbar Links - Breathlike Floating */
+  .navbar-links {
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #5a5145;
+  }
+  
+  .navbar-links a {
+    transition: color 0.3s ease-in-out, transform 0.2s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #b08968;
+    transform: scale(1.08);
+    text-shadow: 0 0 5px rgba(176, 137, 104, 0.7);
+  }
+  
+  /* 🛒 Cart Icon - Glow on Hover */
+  .cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #b08968;
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cart-badge:hover {
+    box-shadow: 0 0 10px rgba(176, 137, 104, 0.8);
+  }
+  
+  /* 🍃 Mobile Menu */
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 85%;
+    background: #f3efe6;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mobile-menu a {
+    display: block;
+    padding: 12px 0;
+    font-size: 18px;
+    color: #5a5145;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .mobile-menu a:hover {
+    color: #b08968;
+    text-shadow: 0 0 5px rgba(176, 137, 104, 0.7);
+  }
+  
+  /* 🎨 Animated Menu Button */
+  .menu-button {
+    font-size: 28px;
+    color: #5a5145;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu-button:hover {
+    transform: scale(1.2);
+  }
+  
